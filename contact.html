@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Andy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    h2 {
+      color: #c45b56;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 3.5rem;
+    }
+
+    form label {
+      font-size: 1.6rem;
+      color: #fff;
+    }
+
+    form input, form textarea {
+      font-size: 1.5rem;
+    }
+
+    /* Mobile adjustments */
+    @media(max-width:768px){
+      h2 {
+        font-size: 3rem;
+      }
+      form label {
+        font-size: 1.5rem;
+      }
+      form input, form textarea {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">Andy</a>
+
+  <div class="menu-icon" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="skills.html">Skills</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+</header>
+
+<section class="contact-section" style="max-width:600px; font-size:13px">
+  <h2>Contact Me</h2>
+  <form action="#" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Contact Number:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="time">Preferred Contact Time:</label>
+    <input type="text" id="time" name="time" placeholder="e.g. 4-6 PM">
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5"></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+ <!-- New Get Email button -->
+  <div style="margin-top: 20px; text-align:center;">
+    <button onclick="copyEmail()" style="font-size: 1.4rem; padding: 10px 20px; cursor: pointer;">
+      Get Email
+    </button>
+    <div id="copyStatus" style="margin-top:10px; color:lightgreen; font-size: 1.2rem; display:none;">
+      Email copied to clipboard!
+    </div>
+  </div>
+</section>
+</section>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('nav').classList.toggle('active');
+  }
+function copyEmail() {
+  const email = "andyrayofficial@gmail.com"; // Replace with your actual email
+  navigator.clipboard.writeText(email).then(() => {
+    document.getElementById("copyStatus").style.display = "block";
+    setTimeout(() => {
+      document.getElementById("copyStatus").style.display = "none";
+    }, 2000);
+  }).catch(err => {
+    alert("Failed to copy email: " + err);
+  });
+}
+</script>
+
+</body>
+</html>

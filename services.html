@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    h2 {
+      color: #c45b56;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 3.5rem;
+    }
+    .services-container {
+      max-width: 1000px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .service-card {
+      background: #111;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(196, 91, 86, 0.2);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(196, 91, 86, 0.4);
+    }
+    .service-icon {
+      font-size: 4rem;
+      margin-bottom: 1.5rem;
+      color: #c45b56;
+    }
+    .service-title {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    .service-description {
+      font-size: 1.6rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* Mobile adjustments */
+    @media(max-width:768px){
+      h2 {
+        font-size: 3rem;
+      }
+      .service-title {
+        font-size: 2rem;
+      }
+      .service-description {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">Andy</a>
+
+  <div class="menu-icon" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="skills.html">Skills</a>
+    <a href="experience.html">Experience</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <h2>My Services</h2>
+  <div class="services-container">
+    <div class="service-card">
+      <div class="service-icon">🎥</div>
+      <div class="service-title">Video Editing</div>
+      <div class="service-description">High-quality, cinematic YouTube video edits, including motion graphics and sound design.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🤝</div>
+      <div class="service-title">YouTube Collaboration</div>
+      <div class="service-description">Partner with me for engaging content collaborations and cross-promotion on our channels.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">📢</div>
+      <div class="service-title">Social Media Promotion</div>
+      <div class="service-description">Boost your brand with promotional shoutouts, product reviews, and featured content on my platforms.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-icon">🛠️</div>
+      <div class="service-title">Custom Projects</div>
+      <div class="service-description">Got a creative idea? Let's talk and build something awesome together tailored to your needs.</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('nav').classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>

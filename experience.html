@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Experience</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    h2 {
+      color: #c45b56;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 3.5rem;
+    }
+    .timeline {
+      max-width: 800px;
+      margin: auto;
+      border-left: 3px solid #c45b56;
+      padding-left: 20px;
+    }
+    .experience-item {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 30px;
+    }
+    .experience-item::before {
+      content: '';
+      position: absolute;
+      left: -11px;
+      top: 5px;
+      width: 14px;
+      height: 14px;
+      background: #c45b56;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(196, 91, 86, 0.6);
+    }
+    .job-title {
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    .job-date {
+      font-size: 1.4rem;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    .job-description {
+      font-size: 1.6rem;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    /* Mobile adjustments */
+    @media(max-width: 768px){
+      h2 {
+        font-size: 3rem;
+      }
+      .timeline {
+        border-left: 2px solid #c45b56;
+        padding-left: 15px;
+      }
+      .job-title {
+        font-size: 1.8rem;
+      }
+      .job-date, .job-description {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">Andy</a>
+
+  <div class="menu-icon" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="skills.html">Skills</a>
+    <a href="experience.html" class="active">Experience</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="contact-section">
+  <h2>My Experience</h2>
+  <div class="timeline">
+    <div class="experience-item">
+      <div class="job-title">YouTube Content Creator</div>
+      <div class="job-date">2020 - Present</div>
+      <div class="job-description">
+        Managing my own YouTube channel, creating gaming content, vlogs, and tutorials. Grew the channel to over 50k subscribers through regular uploads and audience engagement.
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-title">Freelance Video Editor</div>
+      <div class="job-date">2019 - Present</div>
+      <div class="job-description">
+        Editing videos for creators and clients including cinematic effects, transitions, and motion graphics for social media platforms like YouTube, Instagram, and TikTok.
+      </div>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-title">Social Media Marketer</div>
+      <div class="job-date">2018 - 2020</div>
+      <div class="job-description">
+        Managed social media pages for local brands and influencers. Created promotional content, ran ad campaigns, and built organic audience growth strategies.
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleMenu() {
+    document.querySelector('nav').classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
